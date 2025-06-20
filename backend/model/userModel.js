@@ -7,7 +7,7 @@ const Cricketer = sequelize.define('cricketerdetails', {
         type:DataTypes.INTEGER,
         autoIncrement:true,
         primaryKey:true,
-        allowNull:true
+        
     },
     name:{
         type:DataTypes.STRING,
@@ -30,10 +30,30 @@ const Cricketer = sequelize.define('cricketerdetails', {
 
     },
     description:{
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         allowNull:false
     },
     no_of_matches:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
+    score:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
+    fifties:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
+    centuries:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
+    wickets:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+    },
+    average:{
         type:DataTypes.INTEGER,
         allowNull:false
     }

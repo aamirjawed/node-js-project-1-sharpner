@@ -4,7 +4,10 @@ const { Op } = require("sequelize");
 
 const addDetails = async (req, res) => {
   try {
-    const { name, dob, url, birth_place, description, no_of_matches } =
+    const { 
+      name, dob, url, birth_place, description, no_of_matches ,
+      score, fifties, centuries, wickets, average
+    } =
       req.body;
 
     const crickter = await Cricketer.create({
@@ -14,6 +17,11 @@ const addDetails = async (req, res) => {
       birth_place: birth_place,
       description: description,
       no_of_matches: no_of_matches,
+      score:score,
+      fifties: fifties,
+      centuries:centuries,
+      wickets:wickets,
+      average:average
     });
 
     res.status(201).json(crickter);
@@ -51,7 +59,8 @@ const getDetailsWithId = async (req,res) => {
 const updateDetails = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, dob, url, birth_place, description, no_of_matches } =
+    const { name, dob, url, birth_place, description, no_of_matches ,
+      score, fifties, centuries, wickets, average } =
       req.body;
 
     const user = await Cricketer.findByPk(id);
@@ -67,6 +76,11 @@ const updateDetails = async (req, res) => {
       birth_place: birth_place,
       description: description,
       no_of_matches: no_of_matches,
+      score:score,
+      fifties: fifties,
+      centuries:centuries,
+      wickets:wickets,
+      average:average
     });
 
     await user.save();
