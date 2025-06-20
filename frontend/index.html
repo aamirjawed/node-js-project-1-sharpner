@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>Cricket Career</h1>
+      </div>
+      <div class="form">
+        <form id="form">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <div>
+            <label for="url">Photo URL:</label>
+            <input type="url" id="url" name="url" />
+          </div>
+          <div>
+            <label for="birth_place">Birthplace:</label>
+            <input type="text" id="birth_place" name="birth_place" />
+          </div>
+          <div>
+            <label for="description">Career Description:</label>
+            <textarea id="description" name="description"></textarea>
+          </div>
+          <div>
+            <label for="no_of_matches">No of matches:</label>
+            <input
+              type="number"
+              id="no_of_matches"
+              name="no_of_matches"
+              row="20"
+              col="5"
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      
+    </div>
+   <div>
+  <input type="text" name="search" id="search" placeholder="Search by name" />
+  <button onclick="searchUser()">Search</button>
+</div>
+    <div>
+        <ul class="output"></ul>
+      </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
